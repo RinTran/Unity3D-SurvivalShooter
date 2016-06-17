@@ -220,7 +220,7 @@ Animator:
   m_GameObject: {fileID: 104722}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b77f122f451a2394898a24191c26107c, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 27875c512eaa49f4dbe70ae8bb2c04a6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 300
   currentHealth: 0
-  sinkSpeed: 2.5
+  sinkSpeed: 1
   scoreValue: 50
   deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
 --- !u!114 &11474866
@@ -2527,6 +2527,11 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 22100000, guid: 27875c512eaa49f4dbe70ae8bb2c04a6,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: sinkSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

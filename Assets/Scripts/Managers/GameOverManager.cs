@@ -1,16 +1,24 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
+using System.Collections;
 public class GameOverManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;
+	Text text;
 
+	string score;
+	
+	//public float restartDelay;
 
-    Animator anim;
+	//float restartTimer;
+    //Animator anim;
 
 
     void Awake()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
+		text = GetComponent<Text> ();
+		score = "Score: 0";
     }
 
 
@@ -18,7 +26,13 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
-            anim.SetTrigger("GameOver");
+			score = text.GetComponent<string>();
+			PlayerPrefs.SetString("score",score);
+            //anim.SetTrigger("GameOver");
+			Application.LoadLevel("EndLevel");
+			//restartTimer += Time.deltaTime;
+			//if (restartTimer >= restartDelay)
+			//	Application.LoadLevel(Application.loadedLevel);
         }
     }
 }
