@@ -4,9 +4,9 @@ using System.Collections;
 public class GameOverManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;
-	Text text;
+	public Text text;
 
-	string score;
+	//string score;
 	
 	//public float restartDelay;
 
@@ -17,8 +17,8 @@ public class GameOverManager : MonoBehaviour
     void Awake()
     {
         //anim = GetComponent<Animator>();
-		text = GetComponent<Text> ();
-		score = "Score: 0";
+		//text = GetComponent<Text> ();
+		//score = "Score: 0";
     }
 
 
@@ -26,8 +26,7 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
-			score = text.GetComponent<string>();
-			PlayerPrefs.SetString("score",score);
+			PlayerPrefs.SetString("score",text.text);
             //anim.SetTrigger("GameOver");
 			Application.LoadLevel("EndLevel");
 			//restartTimer += Time.deltaTime;

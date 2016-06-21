@@ -1464,7 +1464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2072113278}
-  restartDelay: 3
+  text: {fileID: 1277641359}
 --- !u!1 &1932281259
 GameObject:
   m_ObjectHideFlags: 0

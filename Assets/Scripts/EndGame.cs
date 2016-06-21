@@ -4,10 +4,12 @@ using System.Collections;
 
 public class EndGame : MonoBehaviour {
 
-	Text text;
+	public Text text;
 	// Use this for initialization
 	void Start () {
-	
+		//text = GetComponent <Text> ();
+		string yourScore = PlayerPrefs.GetString ("score");
+		text.text = yourScore;
 	}
 	
 	// Update is called once per frame
